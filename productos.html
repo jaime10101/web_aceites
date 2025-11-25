@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceites Del Sur - Nuestros Productos</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header class="productos-header-iconos">
+        <div class="header-icons" style="position: absolute; top: 20px; right: 20px; z-index: 100;">
+            <a href="#cart" class="cart-icon" id="cart-icon-btn">
+                🛒
+                <span id="cart-count-badge">0</span>
+            </a>
+        </div>
+    </header>
+
+    <section id="productos" class="productos-section">
+        <div class="header-productos">
+            <a href="index.html" class="back-link">← Volver al Inicio</a>
+            <h2>Nuestros Productos</h2>
+            <p>Descubre la excelencia en cada gota de aceite de oliva</p>
+        </div>
+        
+        <div class="search-and-filter">
+            <input type="text" id="searchInput" placeholder="Buscar productos..." class="search-input">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="Clásico">Clásico</button>
+                <button class="filter-btn" data-filter="Gourmet">Gourmet</button>
+                <button class="filter-btn" data-filter="Renovable">Renovable</button>
+            </div>
+        </div>
+
+        <div class="product-grid">
+            </div>
+    </section>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+        </div>
+    </div>
+    
+    <aside id="cart-sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Carrito de Compras</h3>
+            <span class="close-cart-btn">×</span>
+        </div>
+        <div id="cart-items">
+            <p style="color: #333; background: white; padding: 10px; border-radius: 5px;">El carrito está vacío.</p>
+        </div>
+        <div class="cart-summary">
+            <p>Subtotal: <span>$0.00</span></p>
+            <p class="total">Total: <span>$0.00</span></p>
+            <button class="btn btn-checkout" disabled>Proceder al Pago</button>
+        </div>
+    </aside>
+
+    
+    <div id="payment-modal" class="modal payment-modal">
+    <div class="modal-content payment-content-wrapper">
+        
+        <div class="payment-content">
+            
+            <div class="payment-header">
+                <div>
+                    <h3>Método de Pago</h3>
+                    <p class="subtitle">Ingresa los datos de tu tarjeta</p>
+                </div>
+                <span class="close-btn">×</span>
+            </div>
+
+            <div class="order-summary">
+                </div>
+            
+            <div class="payment-form-container">
+                
+                <div class="card-visual">
+                    <div class="card-chip"></div>
+                    <span class="card-lock-icon">🔒</span>
+                    <div class="card-number-display" id="card-display-number">•••• •••• •••• ••••</div>
+                    <div class="card-details-row">
+                        <div class="card-holder">
+                            <span class="card-label">Titular</span>
+                            <span class="card-value" id="card-display-holder">NOMBRE APELLIDO</span>
+                        </div>
+                        <div class="card-expiry">
+                            <span class="card-label">Vence</span>
+                            <span class="card-value" id="card-display-expiry">MM/AA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="payment-form">
+                    
+                    <div>
+                        <label for="card-holder-name">👤 Nombre del Titular</label>
+                        <input type="text" id="card-holder-name" placeholder="JUAN PÉREZ" required>
+                    </div>
+
+                    <div>
+                        <label for="card-number">💳 Número de Tarjeta</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="card-expiry">📅 Fecha de Vencimiento</label>
+                            <input type="text" id="card-expiry" placeholder="MM/AA" maxlength="5" required>
+                        </div>
+                        <div class="input-field cvv-field">
+                            <label for="card-cvv">🔐 CVV</label>
+                            <input type="text" id="card-cvv" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-pay">Pagar $0.00</button>
+                    <p class="secure-text">Transacción segura y encriptada</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="payment-processing" id="payment-processing-overlay">
+            <div class="spinner"></div>
+            <p>Procesando Pago...</p>
+        </div>
+
+        <div class="payment-success" id="payment-success-overlay">
+            <span class="success-icon">✔️</span> 
+            <h2>Pago Exitoso</h2>
+            <p>Tu pedido ha sido procesado correctamente.</p>
+        </div>
+        
+    </div>
+</div>
+    
+    <div id="toast-notification"></div>
+
+     <footer class="contact-footer">
+        <div class="contact-grid">
+            <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <p>Teléfono</p>
+                <p>+34 900 123 456</p>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">✉️</span>
+                <p>Email</p>
+                <p>info@aceitesdelsur.com</p>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <p>Dirección</p>
+                <p>Sevilla, España</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Aceites Del Sur</p>
+            <p><small>La excelencia mediterránea desde 1990</small></p>
+            <p>&copy; 2025 Aceites Del Sur. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
