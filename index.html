@@ -11,6 +11,11 @@
     <header class="hero-section">
         
         <div class="header-icons" style="z-index: 100;">
+
+            <button id="theme-toggle-btn" class="theme-toggle-btn">
+                🌙
+            </button>
+
             <a href="#cart" class="cart-icon" id="cart-icon-btn">
                 🛒
                 <span id="cart-count-badge">0</span>
@@ -29,8 +34,8 @@
 
                 <div class="carousel-item video-slide active">
                     <video id="hero-video" autoplay muted loop playsinline>
-                        <source src="./img/video .mp4" type="video/mp4">
-                        Tu navegador no soporta el tag de video.
+                        <source src="./img/proces.mp4" type="video/mp4">
+                        
                     </video>
                 </div>
 
@@ -38,6 +43,40 @@
         </div>
         
     </header>
+
+
+
+    <section class="historia-section">
+    <h2>El Secreto de tu Desayuno Perfecto</h2>
+    <div class="historia-content">
+        
+        <div class="text-content"> 
+            <p><strong>¿Existe algo más auténtico y delicioso que una tostada con tomate y nuestro Aceite de Oliva Virgen Extra?</strong> Es el ritual que define la mañana, una explosión de frescura y sabor que te conecta con la dieta mediterránea.
+            
+            Nuestro Aceite, Aceites del Sur está especialmente elaborado para este momento. Su suave frutado y el toque de picor justo realzan el dulzor natural del tomate, transformando una simple tostada en una experiencia gourmet. La alta calidad y pureza (extracción en frío) garantizan que cada gota aporta **salud y un brillo inigualable**.</p>
+
+            <p>De los olivares ancestrales de Andalucía, directamente a tu mesa. Conviértete en un experto y eleva tu tostada. **¡Es el sabor que tus clientes buscarán cada mañana!**</p>
+            
+            <div class="stats-boxes">
+                <div class="stat-box box-green">
+                    <strong>9/10</strong>
+                    <span>Clientes la prefieren para Tostadas</span>
+                </div>
+                <div class="stat-box box-yellow">
+                    <strong>100%</strong>
+                    <span>AOVE Extracción en Frío</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="image-container">
+            <img src="./img/tost.jpg" alt="Tostada de pan con tomate rallado y Aceite de Oliva Virgen Extra" style="max-width: 100%; border-radius: 15px;">
+        </div>
+
+    </div>
+</section>
+
+
 
     <section class="historia-section">
         <h2>Nuestra Historia</h2>
@@ -66,7 +105,6 @@ En nuestro molino, esta tradición se une a la innovación: empleamos la tecnolo
             </div>
         </div>
     </section>
-    
     <section class="certificaciones-section">
         <h2 class="section-title">Calidad Garantizada</h2>
         <h3>Certificaciones de Calidad</h3>
@@ -292,8 +330,15 @@ En nuestro molino, esta tradición se une a la innovación: empleamos la tecnolo
             <p>Aceites Del Sur</p>
             <p><small>La excelencia mediterránea desde 1990</small></p>
             <p>&copy; 2025 Aceites Del Sur. Todos los derechos reservados.</p>
+            <p><small>Herrera-Dev</small></p>
         </div>
     </footer>
+    
+    <div id="toast-notification"></div>
+
+    <button id="scrollTopBtn" class="scroll-top-btn" title="Volver arriba">
+        ↑
+    </button>
 
     <script src="script.js"></script>
 
